@@ -22,4 +22,9 @@ resource "azurerm_maintenance_configuration" "maintenance" {
     time_zone             = "Pacific Standard Time"
     recur_every           = "Week Saturday"
   }
+  install_patches {
+  reboot_setting = "IfRequired"
+  classifications_to_include = ["Critical", "Security"]
+  kb_numbers_to_exclude = []
+}
 }

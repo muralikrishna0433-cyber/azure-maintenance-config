@@ -18,7 +18,7 @@ resource "azurerm_maintenance_configuration" "maintenance" {
   window {
     start_date_time       = "2025-08-01T02:00:00Z"
     expiration_date_time  = "2025-12-01T02:00:00Z"
-    duration              = "PT2H"
+    duration              = "02:00"
     time_zone             = "Pacific Standard Time"
     recur_every           = "Week Saturday"
   }
